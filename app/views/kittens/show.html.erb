@@ -1,4 +1,23 @@
-<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= @kitten.name%></td>
+    <td><%= @kitten.age %></td>
+    <td><%= @kitten.cuteness %></td>
+    <td><%= @kitten.softness %></td>
+  </tr>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_kitten_path(@kitten) %> |
-<%= link_to 'Back', kittens_path %>
+<%= link_to 'Back', kittens_path %> |
+<%= link_to 'Delete', @kitten, method: :delete %>

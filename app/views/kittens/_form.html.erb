@@ -10,7 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :age %>
+  <%= f.select :age, options_for_select((1..10)) %>
+  
+  <%= f.label :cuteness %>
+  <%= f.select :cuteness, options_for_select((1..10)) %>
+  
+  <%= f.label :softness %>
+  <%= f.select :softness, options_for_select((1..10)) %>
   <div class="actions">
     <%= f.submit %>
   </div>
